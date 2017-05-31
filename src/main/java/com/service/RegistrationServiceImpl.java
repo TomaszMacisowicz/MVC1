@@ -25,6 +25,6 @@ public class RegistrationServiceImpl implements RegistrationService {
     }
 
     public List<Registration> listUser() {
-        return hibernateTemplate.find("from Registration");
+        return (List<Registration>) hibernateTemplate.find("from Registration");
     }
 }
